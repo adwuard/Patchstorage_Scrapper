@@ -1,4 +1,4 @@
-## Usage
+# Description
 This scrip can scrap patches from patchstorage.com. This patch is specifically designed for Zoia users. But can be widely adapt to different platform.  
 
 
@@ -30,7 +30,7 @@ source activate venv/bin/activate
 sudo python3 psScrapper 
 `  
 
-##### Disclaimer
+## Disclaimer
 This is for personal use only!  
 please to no mass download abuse patchstorage's user-end agreement, nor mass distribute downloaded content. You will need to follow and respect each artist's patch license agreement.
 
