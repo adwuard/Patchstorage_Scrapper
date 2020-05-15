@@ -135,7 +135,7 @@ def getPatchLinks():
     # Scrap from all available pages
     while get_url(url.format(page)).getcode() == 200:
     # Scrap only from page 1 through 10
-    # for page in range(1,10):
+    # for page in range(1, 2):
         print("Getting Page " + str(page) + " patches.......")
         data = get_url(url.format(page)).read()  # The data u need
         soup = BeautifulSoup(data, "html.parser")
