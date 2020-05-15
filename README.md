@@ -6,7 +6,7 @@ This scrip can scrap patches from patchstorage.com. This patch is specifically d
 - CSV file logging each's patch's description and information.
 - Zoia friendly folder structure, allowing better loading_from_SD experience.
 
-![](screenshot/1.png | width=100)
+![](screenshot/1.png|width=100)
 
 ### ZOIA_SD Structure
 This is folder is specifically structured to zoia's loading_from_sd mechanism.  
