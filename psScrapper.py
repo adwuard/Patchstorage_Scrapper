@@ -14,7 +14,7 @@ url = "https://patchstorage.com/platform/zoia/page/{}/"
 savePath = os.path.join("downloaded", str(datetime.datetime.now()).split(".")[0])
 zoiaFriendly = os.path.join(savePath, "ZOIA_SD")
 raw_downloads = os.path.join(savePath, "raw_downloads")
-
+txtFile = None
 patches = []
 title = []
 author = []
@@ -204,6 +204,15 @@ def addToCSV(p):
             writer.writerow(
                 [patchTitle.getText(), p, authorABlock.getText(), l['href'], patchDesDiv.getText(), tagsBuilder])
 
+        textFile.write("Patch: " + patchTitle.getText() + "\n")
+        textFile.write("File Name: " + os.path.basename(str(l['href'])) + "\n")
+        textFile.write("Patch Link: " + p + "\n")
+        textFile.write("Author: " + authorABlock.getText() + "\n")
+        textFile.write("Patch Download Link: " + l['href'] + "\n")
+        textFile.write("Tags: " + tagsBuilder + "\n")
+        textFile.write("Description: " + patchDesDiv.getText() + "\n")
+        textFile.write("==========================================================\n\n\n\n\n")
+
         # Get infos not properly parsed yet
         # patchInfoUL = soup.find("ul", {"class", "list-group list-group-flush"})
         # infolis = patchInfoUL.findAll("li")
@@ -237,7 +246,10 @@ if __name__ == '__main__':
         os.makedirs(zoiaFriendly)
         os.makedirs(raw_downloads)
 
+        textdest = os.path.join(savePath, "downloadLog.txt")
         csvdest = os.path.join(savePath, "downloadLog.csv")
+        textFile = open(textdest, "a")
+
         if not os.path.exists(csvdest):
             with open(csvdest, 'a', newline='') as file:
                 writer = csv.writer(file)
