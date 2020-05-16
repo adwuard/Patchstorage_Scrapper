@@ -6,7 +6,7 @@ This scrip can scrap patches from patchstorage.com. This patch is specifically d
 - CSV file logging each's patch's description and information.
 - Zoia friendly folder structure, allowing better loading_from_SD experience.
 
-![](screenshot/1.png|width=100)
+![](screenshot/1.png)
 
 ### ZOIA_SD Structure
 This is folder is specifically structured to zoia's loading_from_sd mechanism.  
@@ -25,11 +25,11 @@ Not going through details on how to install python or run python.
 There are lots of information online.     
 Execute the following command in terminal and to run `venv` python environment.
 
-First `cd` to project folder`
-`
-source activate venv/bin/activate
-sudo python3 psScrapper 
-`  
+First `cd` to project folder, then
+```shell
+source venv/bin/activate
+sudo python3 psScrapper.py 
+```  
 
 ## Disclaimer
 This is for personal use only!  
